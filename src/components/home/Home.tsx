@@ -3,9 +3,10 @@ import ExperiencePresenter, { type ExperienceNode } from '../experience/Experien
 import { Navbar } from '../nav';
 import infosys from '../../images/infosysLogo.webp';
 import rebuild from '../../images/rebuildLogo.webp';
+import ProjectExperience, { type ProjectExperienceNode } from '../experience/ProjectExperience';
 
 export default function Home() {
-  const listOfExperience: ExperienceNode[] = [
+  const workExperience: ExperienceNode[] = [
     {
       imageSrc: infosys,
       title: 'Infosys',
@@ -26,12 +27,32 @@ export default function Home() {
         'Lead for researching log metric methods on apps.,',
     },
   ];
+  const projectExperience: ProjectExperienceNode[] = [
+    {
+      title: 'Receiptify Android App',
+      description:
+        'Developed an Android app that digitizes receipts using Firebase ML Kit, enabling users to scan, store, and analyze their purchase',
+    },
+    {
+      title: 'Fostlings iOS App',
+      description:
+        'Flutter app for Ford Focus ST owners to share car builds and troubleshoot repairs together.,',
+    },
+    {
+      title: 'Plan Your Way Planners',
+      description:
+        'Fully deployed and managed by me. I started this website to help a small business eliminate the need for manual pdf order forms and help customers order their own planner on this e-commerce-like site.',
+    },
+  ];
+
   return (
     <div className='h-screen'>
       <Navbar />
       <About />
-      <h1>Work Experience</h1>
-      <ExperiencePresenter listOfExperience={listOfExperience} />
+      <h1 className=' text-4xl flex justify-center mt-2'>Work Experience</h1>
+      <ExperiencePresenter listOfExperience={workExperience} />
+      <h1 className='text-4xl flex justify-center mt-2'>Projects</h1>
+      <ProjectExperience listOfExperience={projectExperience} />
     </div>
   );
 }

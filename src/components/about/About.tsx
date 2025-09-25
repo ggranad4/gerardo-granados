@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className=''>
-      <h1 className='text-4xl flex justify-center'>Checking title sizing </h1>
+      <h1 className='text-4xl flex justify-center mt-2 mb-2'>Checking title sizing </h1>
       <div className='container mx-auto bg-[#4699B9] text-white p-6 rounded-lg'>
         <img src={'/images/Gerardo.png'} alt='Photo of me' className='w-full h-auto rounded-sm' />
 
