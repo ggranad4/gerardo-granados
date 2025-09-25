@@ -7,7 +7,7 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: 'About Gerardo', href: '/home' },
-  { label: 'Hoe', href: '/about' },
+  { label: 'Contact me', href: '/about' },
 ];
 
 export default function Nav() {
