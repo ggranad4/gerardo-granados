@@ -1,11 +1,23 @@
 import { About } from '../about';
-import ExperiencePresenter, { type ExperienceNode } from '../experience/ExperiencePresenter';
 import { Navbar } from '../nav';
 import infosys from '../../images/infosysLogo.webp';
 import rebuild from '../../images/rebuildLogo.webp';
 import ProjectExperience, { type ProjectExperienceNode } from '../experience/ProjectExperience';
-
+import ExperiencePresenter, { type ExperienceNode } from '../experience/ExperiencePresenter';
+import AdditionalLink, { type AdditionalLinkNode } from '../miscellaneous/AdditionalLink';
+import github from '../../images/githubLogo.webp';
+import linkedIn from '../../images/linkedinLogo.webp';
 export default function Home() {
+  const githubLink: AdditionalLinkNode = {
+    linkToSite: 'https://github.com/ggranad4',
+    logo: github,
+    title: 'Github',
+  };
+  const linkedInLink: AdditionalLinkNode = {
+    linkToSite: 'https://www.linkedin.com/in/gerardo-granados-a755bab8/',
+    logo: linkedIn,
+    title: 'LinkedIn',
+  };
   const workExperience: ExperienceNode[] = [
     {
       imageSrc: infosys,
@@ -53,6 +65,19 @@ export default function Home() {
       <ExperiencePresenter listOfExperience={workExperience} />
       <h1 className='text-4xl flex justify-center mt-2'>Projects</h1>
       <ProjectExperience listOfExperience={projectExperience} />
+      <h1 className='text-4xl flex justify-center mt-2'>Additonal Links</h1>
+      <div className='flex justify-center gap-4'>
+        <AdditionalLink additionalLink={githubLink} />
+        <AdditionalLink additionalLink={linkedInLink} />
+      </div>
+
+      <a
+        href='../../public/Gerardo_resume.pdf'
+        download='Gerardo_resume.pdf'
+        className='px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 flex justify-center mx-auto w-50'
+      >
+        Download my resume
+      </a>
     </div>
   );
 }
