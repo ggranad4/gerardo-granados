@@ -7,6 +7,7 @@ import ExperiencePresenter, { type ExperienceNode } from '../experience/Experien
 import AdditionalLink, { type AdditionalLinkNode } from '../miscellaneous/AdditionalLink';
 import github from '../../images/githubLogo.webp';
 import linkedIn from '../../images/linkedinLogo.webp';
+import appleLogo from '../../images/appleLogo.jpg';
 export default function Home() {
   const githubLink: AdditionalLinkNode = {
     linkToSite: 'https://github.com/ggranad4',
@@ -49,6 +50,7 @@ export default function Home() {
       title: 'Fostlings iOS App',
       description:
         'Flutter app for Ford Focus ST owners to share car builds and troubleshoot repairs together.,',
+      additionalLogo: appleLogo,
     },
     {
       title: 'Plan Your Way Planners',
