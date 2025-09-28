@@ -9,6 +9,7 @@ import github from '../../images/githubLogo.webp';
 import linkedIn from '../../images/linkedinLogo.webp';
 import appleLogo from '../../images/appleLogo.jpg';
 import kratos from '../../images/kratos.jpeg';
+import Heart from '../shapes/Heart';
 
 export default function Home() {
   const githubLink: AdditionalLinkNode = {
@@ -73,15 +74,18 @@ export default function Home() {
       <div className=' box-border w-[90%] h-80 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
         <ProjectExperience listOfExperience={projectExperience} />
       </div>
-
       <h1 className='text-4xl pb-5 flex justify-center mt-2'>My code reviewer, Kratos</h1>
-      <img
-        src={kratos}
-        alt='Photo of kratos my dog'
-        width={250}
-        height={250}
-        className='rounded-lg mx-auto'
-      />
+      <div className='flex flex-row justify-center'>
+        <Heart className='ml-80 mt-20 position-absolute' />
+        <img
+          src={kratos}
+          alt='Photo of kratos my dog'
+          width={250}
+          height={250}
+          className='rounded-lg mr-20 '
+        />
+        <Heart className='mr-50 mt-20' />
+      </div>
       <h1 className='text-4xl flex justify-center mt-2'>Additonal Links</h1>
 
       <div className='flex justify-center gap-4'>
