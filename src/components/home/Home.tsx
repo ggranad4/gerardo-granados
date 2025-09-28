@@ -67,26 +67,26 @@ export default function Home() {
       <Navbar />
       <About />
       <h1 className=' text-4xl flex justify-center mt-2 mb-2'>Work Experience</h1>
-      <div className=' box-border w-[90%] h-80 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
+      <div className=' box-border w-[60%] h-200 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
         <ExperiencePresenter listOfExperience={workExperience} />
       </div>
       <h1 className='text-4xl flex justify-center mt-2 mb-2'>Projects</h1>
-      <div className=' box-border w-[90%] h-80 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
+      <div className=' box-border w-[60%] h-200 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
         <ProjectExperience listOfExperience={projectExperience} />
       </div>
       <h1 className='text-4xl pb-5 flex justify-center mt-2'>My code reviewer, Kratos</h1>
-      <div className='flex flex-row justify-center'>
-        <Heart className='ml-80 mt-20 position-absolute' />
+      <div className='flex justify-center '>
+        <Heart className='animate-pulse mt-30 mr-5 ' />
         <img
           src={kratos}
           alt='Photo of kratos my dog'
           width={250}
           height={250}
-          className='rounded-lg mr-20 '
+          className='rounded-lg'
         />
-        <Heart className='mr-50 mt-20' />
+        <Heart className='rotate-90 animate-pulse mt-30 ml-5' />
       </div>
-      <h1 className='text-4xl flex justify-center mt-2'>Additonal Links</h1>
+      <h1 className='text-4xl flex justify-center mt-2'>Additional Links</h1>
 
       <div className='flex justify-center gap-4'>
         <AdditionalLink additionalLink={githubLink} />
