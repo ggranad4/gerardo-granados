@@ -8,6 +8,8 @@ import AdditionalLink, { type AdditionalLinkNode } from '../miscellaneous/Additi
 import github from '../../images/githubLogo.webp';
 import linkedIn from '../../images/linkedinLogo.webp';
 import appleLogo from '../../images/appleLogo.jpg';
+import kratos from '../../images/kratos.jpeg';
+
 export default function Home() {
   const githubLink: AdditionalLinkNode = {
     linkToSite: 'https://github.com/ggranad4',
@@ -60,26 +62,39 @@ export default function Home() {
   ];
 
   return (
-    <div className='h-screen'>
+    <div className='h-screen w-screen'>
       <Navbar />
       <About />
-      <h1 className=' text-4xl flex justify-center mt-2'>Work Experience</h1>
-      <ExperiencePresenter listOfExperience={workExperience} />
-      <h1 className='text-4xl flex justify-center mt-2'>Projects</h1>
-      <ProjectExperience listOfExperience={projectExperience} />
+      <h1 className=' text-4xl flex justify-center mt-2 mb-2'>Work Experience</h1>
+      <div className=' box-border w-[90%] h-80 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
+        <ExperiencePresenter listOfExperience={workExperience} />
+      </div>
+      <h1 className='text-4xl flex justify-center mt-2 mb-2'>Projects</h1>
+      <div className=' box-border w-[90%] h-80 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
+        <ProjectExperience listOfExperience={projectExperience} />
+      </div>
+
+      <h1 className='text-4xl pb-5 flex justify-center mt-2'>My code reviewer, Kratos</h1>
+      <img
+        src={kratos}
+        alt='Photo of kratos my dog'
+        width={250}
+        height={250}
+        className='rounded-lg mx-auto'
+      />
       <h1 className='text-4xl flex justify-center mt-2'>Additonal Links</h1>
+
       <div className='flex justify-center gap-4'>
         <AdditionalLink additionalLink={githubLink} />
         <AdditionalLink additionalLink={linkedInLink} />
       </div>
-
-      <a
+      {/* <a
         href='../../public/Gerardo_resume.pdf'
         download='Gerardo_resume.pdf'
         className='px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 flex justify-center mx-auto w-50'
       >
         Download my resume
-      </a>
+      </a> */}
     </div>
   );
 }
