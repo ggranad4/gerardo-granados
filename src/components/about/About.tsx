@@ -1,16 +1,14 @@
+import gerardoPhoto from '../../images/headshot.JPEG';
 export default function About() {
   return (
-    <div className=''>
-      <h1 className='text-4xl flex justify-center mt-2 mb-2'>Checking title sizing </h1>
-      <div className='container mx-auto bg-[#4699B9] text-white p-6 rounded-lg'>
-        <img src={'/images/Gerardo.png'} alt='Photo of me' className='w-full h-auto rounded-sm' />
-
-        <h1 className='text-4xl pb-5'>About me</h1>
-
-        <p className=''>
-          Hello everyone, welcome! Hope you having a wonderful day. My name is gerardo and i made
-          this site to present to you the different expereinces ive had, education and projects
-        </p>
+    <div className='  bg-[#4699B9] text-white p-6 '>
+      <div className='flex flex-row gap-3'>
+        <img src={gerardoPhoto} alt='Photo of me' width={150} height={150} className='rounded-lg' />
+        <div className='flex flex-col'>
+          <h1 className='text-4xl '>Gerardo Granados - Software Engineer 3+ yrs</h1>
+          <h1 className='text-2xl ml-5'>Current Stack: Vite + React + TypeScript</h1>
+          <h1 className='text-2xl ml-5'>Current Game Playing: Silent Hill 2</h1>
+        </div>
       </div>
     </div>
   );
