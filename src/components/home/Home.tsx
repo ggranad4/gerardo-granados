@@ -10,6 +10,7 @@ import linkedIn from '../../images/linkedinLogo.webp';
 import appleLogo from '../../images/appleLogo.jpg';
 import kratos from '../../images/kratos.jpeg';
 import Heart from '../shapes/Heart';
+import Displayer from '../displayer/Displayer';
 
 export default function Home() {
   const githubLink: AdditionalLinkNode = {
@@ -66,10 +67,9 @@ export default function Home() {
     <div className='min-h-screen w-screen bg-gradient-to-r from-blue-500 to-blue-700'>
       <Navbar />
       <About />
-      <h1 className=' text-4xl flex justify-center mt-2 mb-2'>Work Experience</h1>
-      <div className=' box-border w-[60%] h-200 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
+      <Displayer title='Work Experience'>
         <ExperiencePresenter listOfExperience={workExperience} />
-      </div>
+      </Displayer>
       <h1 className='text-4xl flex justify-center mt-2 mb-2'>Projects</h1>
       <div className=' box-border w-[60%] h-200 mx-auto px-4 overflow-auto overscroll-contain bg-black rounded-md'>
         <ProjectExperience listOfExperience={projectExperience} />
