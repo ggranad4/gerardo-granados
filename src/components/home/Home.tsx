@@ -63,7 +63,7 @@ export default function Home() {
   ];
 
   return (
-    <div className='h-screen w-screen'>
+    <div className='min-h-screen w-screen bg-gradient-to-r from-blue-500 to-blue-700'>
       <Navbar />
       <About />
       <h1 className=' text-4xl flex justify-center mt-2 mb-2'>Work Experience</h1>
@@ -92,13 +92,13 @@ export default function Home() {
         <AdditionalLink additionalLink={githubLink} />
         <AdditionalLink additionalLink={linkedInLink} />
       </div>
-      {/* <a
+      <a
         href='../../public/Gerardo_resume.pdf'
         download='Gerardo_resume.pdf'
-        className='px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 flex justify-center mx-auto w-50'
+        className='px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg  flex justify-center mx-auto w-50'
       >
         Download my resume
-      </a> */}
+      </a>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import gerardoPhoto from '../../images/headshot.JPEG';
 export default function About() {
   return (
-    <div className='  bg-[#4699B9] text-white p-6 '>
+    <div className='  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white p-6 '>
       <div className='flex flex-row gap-3'>
         <img src={gerardoPhoto} alt='Photo of me' width={150} height={150} className='rounded-lg' />
         <div className='flex flex-col'>
