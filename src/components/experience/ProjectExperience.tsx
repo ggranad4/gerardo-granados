@@ -5,6 +5,7 @@ export type ProjectExperienceNode = {
   imgSrc?: string;
   title: string;
   additionalLogo?: string;
+  imageWidth?: number;
 };
 type ProjectExperienceProps = {
   listOfExperience: ProjectExperienceNode[];
@@ -14,15 +15,17 @@ export default function ProjectExperience(props: ProjectExperienceProps) {
   return (
     <div className='mt-10 '>
       {listOfExperience.map((experienceNode, index) => {
-        const { title, description, imgSrc, additionalLogo } = experienceNode;
+        const { title, description, imgSrc, additionalLogo, imageWidth } = experienceNode;
 
         return (
-          <div key={index} className='container w-1/2 h-1/2 bg-blue-300 rounded-lg mb-3 mx-auto'>
-            <h1 className='text-4xl ml-2'>
-              {title} <img src={additionalLogo} width={25} height={25} />'
-            </h1>
-            <p className='ml-5'>{descriptionPresentor(description)}</p>
+          <div key={index} className='flex flex-col bg-black rounded w-[90%] h-[25%] mx-auto mt-20'>
+            <div className='flex flex-row mx-auto gap-6 mb-5'>
+              <h1 className='text-4xl text-white text-center '>{title}</h1>
+              <img src={additionalLogo} width={imageWidth ?? 25} height={25} />'
+            </div>
+            <p className='ml-5 text-white'>{descriptionPresentor(description)}</p>
             {imgSrc && <img src={imgSrc} width={250} height={250} />}
+            <hr className='border-0 h-1 bg-white mt-5'></hr>
           </div>
         );
       })}
