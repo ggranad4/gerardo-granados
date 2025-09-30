@@ -1,5 +1,3 @@
-import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
-
 type NavItem = {
   label: string;
   href: string;
